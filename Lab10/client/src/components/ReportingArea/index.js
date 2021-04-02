@@ -1,5 +1,7 @@
+//importing react
 import React from "react";
 
+//class that displays the returned information
 class ReportingArea extends React.Component{
     render(){
         return(
@@ -10,5 +12,5 @@ class ReportingArea extends React.Component{
         );
     }
 }
-
+//exporting the reporting area class
 export default ReportingArea;

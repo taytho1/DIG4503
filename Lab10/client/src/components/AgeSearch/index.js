@@ -1,5 +1,7 @@
+//importing react
 import React from "react";
 
+//Class theat will handle the age search bar
 class AgeSearch extends React.Component {
     readAge(event){
 
@@ -24,6 +26,7 @@ class AgeSearch extends React.Component {
         });
         element.value = "";
     }
+    //displaying the html
     render(){
         return(
             <div>
@@ -36,5 +39,5 @@ class AgeSearch extends React.Component {
         );
     }
 }
-
+//exporting the age search class
 export default AgeSearch;

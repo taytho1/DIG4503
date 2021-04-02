@@ -1,9 +1,9 @@
-//importing express and fs
+//importing express, fs, and cors
 import Express from "express";
 import fs from "fs";
 import cors from "cors";
 
-//definging the app and the port
+//definging the app and the port and using cors with the app
 const App = Express();
 const port = 3010;
 App.use(cors());
@@ -14,6 +14,7 @@ let fileContents = fs.readFileSync("database.json")
 //converting the file to json
 let database = JSON.parse(fileContents);
 
+//using the client build in the app
 App.use("/", Express.static("client/build"));
 
 //get the names of each employee

@@ -1,5 +1,7 @@
+//importing react
 import React from "react";
 
+//class that will handle the name search bar
 class NameSearch extends React.Component {
     readName(event){
         event.preventDefault();
@@ -20,6 +22,7 @@ class NameSearch extends React.Component {
         });
         element.value = "";
     }
+    //displaying the html
     render(){
         return(
             <div>
@@ -32,5 +35,5 @@ class NameSearch extends React.Component {
         );
     }
 }
-
+//exporting the name search class
 export default NameSearch;
