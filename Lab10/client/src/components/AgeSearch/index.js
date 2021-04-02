@@ -1,7 +1,7 @@
 //importing react
 import React from "react";
 
-//Class theat will handle the age search bar
+//Class that will handle the age search bar
 class AgeSearch extends React.Component {
     readAge(event){
 
