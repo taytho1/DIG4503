@@ -11,7 +11,7 @@ MongoClient.connect(URL, {useUnifiedTopology: true})
 
     let collection = database.collection("listingsAndReviews");
 
-    let cursor = collection.find({beds: {$gte: 5}}, {price: {$lte: 200}}, {"review_scores.review_scores_rating": {$gte: 99 }});
+    let cursor = collection.find({beds: {$gte: 5}}, {price: {$lte: 200}}, {"review_scores.review_score_rating": {$gte: 99 }});
 
 //closing the search
     cursor.forEach(document => {
