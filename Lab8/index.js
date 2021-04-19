@@ -13,7 +13,7 @@ let fileContents = fs.readFileSync("database.json")
 let database = JSON.parse(fileContents);
 
 //get the names of each employee
-App.get('/employees/:name', (req, res) => {
+App.get('/employees/name/:name', (req, res) => {
     //error message
     let result = {"error": "Not found"};
 
@@ -29,7 +29,7 @@ App.get('/employees/:name', (req, res) => {
 })
 
 //get the ages of the employees
-App.get('/ages/:number', (req, res) => {
+App.get('/employees/age/:age', (req, res) => {
     //error message
     let result = {"error": "Not found"};
   
