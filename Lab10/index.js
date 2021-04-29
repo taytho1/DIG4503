@@ -49,11 +49,29 @@ App.get('/employees/age/:age', (req, res) => {
     res.json(result);
     
 })
-//posting the new names and ages to the database
-App.post("/employees/:name/:age", (req, res) => {
+
+//get the positions of each employee
+App.get('/employees/position/:position', (req, res) => {
+    //error message
+    let result = {"error": "Not found"};
+
+    //if the position entered is in the database
+    database.forEach((value) =>{
+        if(req.params.position == value.position){
+            result = value;
+        }
+    });
+    //return json
+    res.json(result);
+    
+})
+
+//posting the new names, ages, and positions to the database
+App.post("/employees/:name/:age/:position", (req, res) => {
     let result = {
         "name": req.params.name,
-        "age": parseInt(req.params.age)
+        "age": parseInt(req.params.age),
+        "position": req.params.position
     };
 
     database.push(result);
